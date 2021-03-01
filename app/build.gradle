@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -16,6 +17,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildFeatures {
+        viewBinding true//取得layout前端數值,不複雜介面的用viewbinding
+        //databinding true 取得laout 前端數值，複雜介面的用databinding
+    }
+
 
     buildTypes {
         release {
